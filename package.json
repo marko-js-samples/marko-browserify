@@ -4,7 +4,8 @@
   "description": "Sample app: Marko + Browserify",
   "main": "server.js",
   "scripts": {
-    "build": "browserify -t markoify --extension='.marko' routes/index/client.js -o static/bundle.js",
+    "build": "mkdir -p static && browserify -g markoify --extension='.marko' routes/index/client.js -o static/bundle.js",
+    "build-prod": "mkdir -p static && NODE_ENV=production browserify -g markoify --extension='.marko' routes/index/client.js -o static/bundle.js",
     "start": "npm run build && node server.js"
   },
   "repository": {
