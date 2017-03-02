@@ -1,0 +1,29 @@
+{
+  "name": "marko-browserify",
+  "version": "1.0.0",
+  "description": "Sample app: Marko + Browserify",
+  "main": "server.js",
+  "scripts": {
+    "build": "browserify -t markoify --extension='.marko' routes/index/client.js -o static/bundle.js",
+    "start": "npm run build && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marko-js-samples/marko-browserify.git"
+  },
+  "author": "Patrick Steele-idem <pnidem@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marko-js-samples/marko-browserify/issues"
+  },
+  "homepage": "https://github.com/marko-js-samples/marko-browserify",
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.15.0",
+    "marko": "^4.0.0-rc.24",
+    "serve-static": "^1.12.0"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0"
+  }
+}
